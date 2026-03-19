@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BADOZA | Creative & Security Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00e5ff;
+            --accent-soft: rgba(0, 229, 255, 0.1);
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- BACKGROUND GRADIENTS --- */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 80% 20%, #1a1a2e 0%, transparent 40%),
+                        radial-gradient(circle at 10% 80%, #0d1b2a 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 0.9;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            display: block;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+        }
+
+        .cta-btn {
+            background: var(--text-main);
+            color: var(--bg);
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--accent-soft);
+            background: var(--accent);
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 10rem 5%;
+        }
+
+        .section-tag {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            display: block;
+            color: var(--accent);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 5rem 5% 2rem;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .credit {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .credit b { color: var(--text-main); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <nav>
+        <a href="#" class="logo">BADO<span>ZA</span></a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#creative">Creative Shoots</a>
+            <a href="#security">Security</a>
+            <a href="#contact">Let's Talk</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <span class="section-tag">Premium Digital Agency</span>
+        <h1>Scale <span>Beyond</span></h1>
+        <p>BADOZA fuses cinematic creativity with enterprise-grade cloud security to protect and propel your business into the next era.</p>
+        <a href="#services" class="cta-btn">Explore Solutions</a>
+    </header>
+
+    <section class="services" id="services">
+        <span class="section-tag">Our Expertise</span>
+        <h2>Integrated Growth</h2>
+        
+        <div class="services-grid">
+            <div class="card">
+                <h3>Visual Design</h3>
+                <p>Developing high-end websites and mobile-first experiences that turn visitors into loyal customers.</p>
+            </div>
+            <div class="card">
+                <h3>Social Management</h3>
+                <p>Strategic content creation and ad management that builds community and drives brand awareness.</p>
+            </div>
+            <div class="card">
+                <h3>Creative Shoot</h3>
+                <p>Cinematic product photography and video production designed for high-conversion social ads.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud Security</h3>
+                <p>Protecting corporate assets with elite cloud security solutions and custom-built digital safeguards.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BADOZA Agency. All Rights Reserved.</p>
+        <p class="credit">Developed by <b>Kunal Dongare</b></p>
+    </footer>
+
+</body>
+</html>
