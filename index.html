@@ -3,342 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADOZA | The Creative & Security Agency</title>
+    <title>BADOZA | Creative & Security Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* --- CSS STYLES --- */
         :root {
-            --bg-color: #EBE9E1; /* High-end editorial paper color */
-            --text-color: #111111; /* Stark ink black */
-            --text-muted: #666666;
-            --border-color: #111111;
-            --accent: #D94833; /* A sophisticated burnt orange/red for subtle pops */
+            --primary-dark: #0A192F; /* Deep Navy Blue */
+            --primary-light: #112240;
+            --accent-gold: #FFB800; /* Rich Gold */
+            --accent-glow: rgba(255, 184, 0, 0.4);
+            --text-light: #F8F9FA;
+            --text-muted: #8892B0;
+            --white: #FFFFFF;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* --- GLOBAL ANIMATIONS --- */
-        @keyframes revealUp {
-            0% { transform: translateY(100%); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+        h1, h2, h3, .logo { 
+            font-family: 'Outfit', sans-serif; 
         }
-        
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .reveal-text {
-            overflow: hidden;
-            display: inline-block;
-        }
-        
-        .reveal-text span {
-            display: inline-block;
-            animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            transform: translateY(100%);
-            opacity: 0;
-        }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
 
         /* --- NAVIGATION --- */
         nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem 4vw;
-            border-bottom: 1px solid var(--border-color);
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 1.5rem 5%; 
+            background: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--text-color);
+        
+        .logo { 
+            font-size: 2rem; 
+            font-weight: 800; 
+            color: var(--white); 
+            text-decoration: none; 
+            letter-spacing: 1px; 
         }
-        .nav-links { display: flex; gap: 3rem; }
+        
+        .logo span { 
+            color: var(--accent-gold); 
+        }
+        
         .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
+            color: var(--text-light); 
+            text-decoration: none; 
+            margin-left: 2.5rem;
+            font-weight: 500; 
+            font-size: 0.95rem; 
+            transition: color 0.3s;
         }
-        .nav-links a::after {
-            content: ''; position: absolute; left: 0; bottom: -4px; width: 100%; height: 1px;
-            background: var(--text-color); transform: scaleX(0); transform-origin: right; transition: transform 0.4s ease;
+        
+        .nav-links a:hover { 
+            color: var(--accent-gold); 
         }
-        .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
 
         /* --- HERO SECTION --- */
         .hero {
-            padding: 8rem 4vw 4rem;
-            min-height: 80vh;
-            display: flex;
+            min-height: 100vh; 
+            display: flex; 
             flex-direction: column;
-            justify-content: center;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(4rem, 12vw, 10rem);
-            line-height: 0.9;
-            font-weight: 400;
-            letter-spacing: -2px;
-            margin-bottom: 3rem;
-        }
-        .hero h1 i { color: var(--text-muted); }
-        
-        .hero-sub {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-top: 1px solid var(--border-color);
-            padding-top: 2rem;
-            margin-top: 4rem;
-        }
-        .hero-sub p {
-            max-width: 450px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-        }
-        .circle-btn {
-            width: 120px; height: 120px;
-            border-radius: 50%;
-            border: 1px solid var(--border-color);
-            display: flex; justify-content: center; align-items: center;
-            text-decoration: none; color: var(--text-color);
-            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;
-            transition: all 0.4s ease;
-        }
-        .circle-btn:hover {
-            background-color: var(--text-color); color: var(--bg-color); transform: scale(0.95);
-        }
-
-        /* --- MARQUEE --- */
-        .marquee-container {
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1.5rem 0;
-            overflow: hidden;
-            white-space: nowrap;
-            background-color: var(--text-color);
-            color: var(--bg-color);
-        }
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 25s linear infinite;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .marquee-content span { margin: 0 3rem; }
-
-        /* --- SERVICES (Editorial Grid) --- */
-        .services { padding: 8rem 4vw; }
-        .section-header {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4rem;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .service-list {
-            border-top: 1px solid var(--border-color);
-        }
-        .service-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border-color);
-            transition: padding 0.4s ease;
-            cursor: pointer;
-        }
-        .service-item:hover { padding-left: 2rem; padding-right: 2rem; }
-        .service-item h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-        .service-item p {
-            max-width: 400px;
-            font-size: 1rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            text-align: right;
-        }
-        .service-item:hover h2 { color: var(--accent); font-style: italic; }
-
-        /* --- SELECTED WORKS --- */
-        .works { padding: 4rem 4vw 8rem; }
-        .work-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0;
-        }
-        .work-item {
-            text-decoration: none;
-            color: var(--text-color);
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--border-color);
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: baseline;
-            gap: 3rem;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            padding: 8rem 5% 4rem; 
             position: relative;
         }
-        .work-num { font-size: 0.9rem; color: var(--text-muted); }
-        .work-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 400;
-            transition: transform 0.4s ease;
-        }
-        .work-role { font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); }
         
-        /* Hover interaction for works */
-        .work-item::before {
-            content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%;
-            background-color: var(--text-color); transform: scaleY(0); transform-origin: bottom;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); z-index: -1;
+        /* Background Glow Effect */
+        .hero::before {
+            content: ''; 
+            position: absolute; 
+            top: 20%; 
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 600px; 
+            height: 600px; 
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            z-index: -1; 
+            filter: blur(60px); 
+            opacity: 0.5; 
+            animation: pulse 6s infinite alternate;
         }
-        .work-item:hover::before { transform: scaleY(1); transform-origin: top; }
-        .work-item:hover { color: var(--bg-color); padding-left: 2rem; }
-        .work-item:hover .work-num, .work-item:hover .work-role { color: var(--bg-color); }
-        .work-item:hover .work-title { transform: translateX(20px); font-style: italic; }
+        
+        @keyframes pulse { 
+            0% { opacity: 0.3; transform: translateX(-50%) scale(0.9); } 
+            100% { opacity: 0.6; transform: translateX(-50%) scale(1.1); } 
+        }
+
+        .tagline {
+            background: rgba(255, 184, 0, 0.1); 
+            color: var(--accent-gold);
+            padding: 0.5rem 1.5rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            font-size: 0.9rem;
+            margin-bottom: 2rem; 
+            letter-spacing: 1px; 
+            text-transform: uppercase;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem); 
+            font-weight: 800; 
+            line-height: 1.1; 
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span { 
+            color: var(--accent-gold); 
+        }
+        
+        .hero p {
+            max-width: 700px; 
+            font-size: 1.2rem; 
+            color: var(--text-muted); 
+            margin-bottom: 3rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-gold); 
+            color: var(--primary-dark);
+            padding: 1.2rem 3rem; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            font-size: 1.1rem;
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 10px 20px rgba(255, 184, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 30px rgba(255, 184, 0, 0.4); 
+            background-color: #FFC933;
+        }
+
+        /* --- SERVICES CARDS --- */
+        .services { 
+            padding: 6rem 5%; 
+            background-color: var(--primary-light); 
+        }
+        
+        .section-title { 
+            text-align: center; 
+            font-size: 2.5rem; 
+            margin-bottom: 4rem; 
+        }
+        
+        .section-title span { 
+            color: var(--accent-gold); 
+        }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2.5rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .card {
+            background: var(--primary-dark); 
+            padding: 3rem 2rem; 
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05); 
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--accent-gold); 
+        }
+        
+        .card-icon {
+            width: 60px; 
+            height: 60px; 
+            background: rgba(255, 184, 0, 0.1); 
+            color: var(--accent-gold);
+            border-radius: 12px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            font-size: 1.8rem; 
+            margin-bottom: 1.5rem; 
+            font-weight: bold;
+        }
+        
+        .card h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 1rem; 
+            color: var(--white); 
+        }
+        
+        .card p { 
+            color: var(--text-muted); 
+            font-size: 0.95rem; 
+        }
+
+        /* --- CLIENT LOGOS --- */
+        .clients { 
+            padding: 6rem 5%; 
+            text-align: center; 
+        }
+        
+        .client-wrapper {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 4rem;
+            max-width: 1000px; 
+            margin: 3rem auto 0;
+            background: var(--white); 
+            padding: 4rem; 
+            border-radius: 24px;
+        }
+        
+        .client-logo {
+            max-width: 200px; 
+            max-height: 100px; 
+            object-fit: contain;
+            filter: grayscale(100%); 
+            opacity: 0.7; 
+            transition: all 0.4s ease;
+        }
+        
+        .client-logo:hover { 
+            filter: grayscale(0%); 
+            opacity: 1; 
+            transform: scale(1.05); 
+        }
+        
+        .nirmanam-text {
+            font-family: 'Outfit', sans-serif; 
+            font-size: 1.8rem; 
+            font-weight: 800;
+            color: #333; 
+            text-transform: uppercase; 
+            transition: all 0.4s ease;
+        }
+        
+        .nirmanam-text:hover { 
+            color: var(--accent-gold); 
+        }
 
         /* --- FOOTER --- */
         footer {
-            padding: 4rem 4vw;
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            text-align: center; 
+            padding: 3rem 5%; 
+            background: #060f1c;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            line-height: 1;
+        
+        .credit { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            letter-spacing: 1px; 
+            margin-top: 1rem; 
         }
-        .credit-box {
-            text-align: right;
-            font-size: 0.85rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        
+        .credit span { 
+            color: var(--accent-gold); 
+            font-weight: bold; 
         }
-        .credit-box b { color: var(--bg-color); }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero-sub { flex-direction: column; align-items: flex-start; gap: 2rem; }
-            .service-item { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .service-item p { text-align: left; }
-            .work-item { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 0; }
+            .hero h1 { font-size: 2.5rem; }
+            .client-wrapper { padding: 2rem; flex-direction: column; gap: 3rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">BADOZA</a>
+        <a href="#" class="logo">BADOZA<span>.</span></a>
         <div class="nav-links">
-            <a href="#expertise">Expertise</a>
-            <a href="#work">Selected Works</a>
-            <a href="#contact">Connect</a>
+            <a href="#services">Our Services</a>
+            <a href="#clients">Our Clients</a>
+            <a href="#contact">Grow With Us</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>
-            <span class="reveal-text"><span>Creative</span></span><br>
-            <span class="reveal-text"><span class="delay-1"><i>&</i> Security</span></span><br>
-            <span class="reveal-text"><span class="delay-2">Agency.</span></span>
-        </h1>
-        
-        <div class="hero-sub">
-            <p>We are a dual-force agency. We craft visually striking digital identities through high-end design and photography, while engineering impenetrable cloud security solutions for global enterprises.</p>
-            <a href="#work" class="circle-btn">View Work</a>
-        </div>
-    </header>
+    <section class="hero">
+        <div class="tagline">Strategic Growth & Design</div>
+        <h1>Architecting <span>Brilliance.</span><br>Securing the Future.</h1>
+        <p>We blend high-end visual design and creative production with impenetrable cloud security solutions to accelerate your business growth.</p>
+        <a href="#services" class="btn-primary">Elevate Your Brand</a>
+    </section>
 
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <span>Web Design</span> • <span>Product Shoots</span> • <span>Cloud Security</span> • <span>Social Growth</span> • 
-            <span>Web Design</span> • <span>Product Shoots</span> • <span>Cloud Security</span> • <span>Social Growth</span> •
-            <span>Web Design</span> • <span>Product Shoots</span> • <span>Cloud Security</span> • <span>Social Growth</span>
-        </div>
-    </div>
-
-    <section class="services" id="expertise">
-        <div class="section-header">
-            <span>01</span>
-            <span>Our Disciplines</span>
-        </div>
-        
-        <div class="service-list">
-            <div class="service-item">
-                <h2>Aesthetics.</h2>
-                <p>Website design and UX development. Creating mobile-first, highly readable, and visually stunning digital storefronts.</p>
+    <section class="services" id="services">
+        <h2 class="section-title">Fueling Your <span>Growth</span></h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Creative Design</h3>
+                <p>Developing visually striking, mobile-first websites that capture attention and drive conversions.</p>
             </div>
-            <div class="service-item">
-                <h2>Production.</h2>
-                <p>Premium creative product shoots and content creation tailored for high-converting social media ads.</p>
+            <div class="card">
+                <div class="card-icon">📸</div>
+                <h3>Product Production</h3>
+                <p>Professional creative shoots and content generation tailored to make your social media ads stand out.</p>
             </div>
-            <div class="service-item">
-                <h2>Protection.</h2>
-                <p>Enterprise-grade cloud security solutions and architecture to safeguard your corporate digital assets.</p>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Cloud Security</h3>
+                <p>Robust, enterprise-grade security solutions designed to protect your corporate digital assets.</p>
             </div>
         </div>
     </section>
 
-    <section class="works" id="work">
-        <div class="section-header">
-            <span>02</span>
-            <span>Selected Archives</span>
-        </div>
-
-        <div class="work-grid">
-            <a href="https://badoza.github.io/Marriot/#" target="_blank" class="work-item">
-                <span class="work-num">001</span>
-                <h3 class="work-title">Marriott Pharma</h3>
-                <span class="work-role">Web Development</span>
+    <section class="clients" id="clients">
+        <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
+        <p style="color: var(--text-muted);">We help businesses scale, secure their infrastructure, and dominate their market.</p>
+        
+        <div class="client-wrapper">
+            <a href="https://badoza.github.io/Marriot/#" target="_blank">
+                <img src="Marriott.JPG.jpeg" alt="Marriott Pharmaceuticals" class="client-logo">
             </a>
             
-            <a href="https://badoza.github.io/froozy-app/" target="_blank" class="work-item">
-                <span class="work-num">002</span>
-                <h3 class="work-title">Froozy Ice Cream</h3>
-                <span class="work-role">Digital App Design</span>
+            <a href="https://badoza.github.io/froozy-app/" target="_blank">
+                <img src="Logo (3).png" alt="Froozy Handcrafted Icecream" class="client-logo">
             </a>
             
-            <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" class="work-item">
-                <span class="work-num">003</span>
-                <h3 class="work-title">Nirmanam Design</h3>
-                <span class="work-role">Brand Website</span>
+            <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" style="text-decoration: none;">
+                <div class="nirmanam-text">Nirmanam Design</div>
             </a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-logo">BADOZA</div>
-        <div class="credit-box">
-            Developed by <b>Kunal Dongare</b>
-        </div>
+        <div class="logo" style="font-size: 1.5rem;">BADOZA<span>.</span></div>
+        <p class="credit">developed by Kunal Dongare</p>
     </footer>
 
 </body>
