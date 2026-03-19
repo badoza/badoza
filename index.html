@@ -3,253 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADOZA | Creative & Security Agency</title>
+    <title>BADOZA | Digital & Creative Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --accent: #00e5ff;
-            --accent-soft: rgba(0, 229, 255, 0.1);
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
+            --bg: #030303;
+            --text-main: #f4f4f4;
+            --text-dim: #7a7a7a;
+            --accent: #d4af37; /* Switched to a premium muted gold/bronze for minimalism */
+            --border: rgba(255, 255, 255, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
+            background-color: var(--bg); color: var(--text-main);
+            font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+            overflow-x: hidden; line-height: 1.5;
         }
 
-        /* --- BACKGROUND GRADIENTS --- */
-        .bg-glow {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 80% 20%, #1a1a2e 0%, transparent 40%),
-                        radial-gradient(circle at 10% 80%, #0d1b2a 0%, transparent 40%);
-            z-index: -1;
+        /* --- TYPOGRAPHY & LAYOUT --- */
+        h1, h2, h3, .logo { font-family: 'Syne', sans-serif; }
+        section { padding: 8rem 5%; max-width: 1400px; margin: 0 auto; }
+        
+        .section-tag {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--text-dim); margin-bottom: 2rem; display: block;
         }
+        
+        .section-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 3rem; line-height: 1.1; }
 
-        /* --- NAVIGATION --- */
+        /* --- NAV --- */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            position: absolute;
-            width: 100%;
-            z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 2rem 5%; position: fixed; width: 100%; top: 0;
+            background: rgba(3, 3, 3, 0.8); backdrop-filter: blur(10px); z-index: 100;
+            border-bottom: 1px solid var(--border);
         }
-
-        .logo {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .logo span { color: var(--accent); }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--text-main); letter-spacing: -1px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
+        /* --- HERO --- */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; }
+        .hero h1 { font-size: clamp(4rem, 10vw, 8rem); font-weight: 800; line-height: 0.9; letter-spacing: -2px; margin-bottom: 1.5rem; }
+        .hero p { max-width: 500px; font-size: 1.1rem; color: var(--text-dim); font-weight: 300; margin-bottom: 3rem; }
+        
+        .scroll-indicator {
+            position: absolute; bottom: 3rem; left: 5%;
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim);
+            display: flex; align-items: center; gap: 1rem;
         }
+        .scroll-indicator::after { content: ''; width: 40px; height: 1px; background: var(--text-dim); display: block; }
 
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(3rem, 10vw, 7rem);
-            line-height: 0.9;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-        }
+        /* --- ABOUT --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .about-text { font-size: 2rem; font-family: 'Syne', sans-serif; line-height: 1.3; }
+        .about-sub { color: var(--text-dim); font-size: 1rem; max-width: 400px; margin-top: 1rem; }
 
-        .hero h1 span {
-            display: block;
-            background: linear-gradient(to right, #fff, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* --- SERVICES --- */
+        .services-wrapper { border-top: 1px solid var(--border); }
+        .service-row {
+            display: grid; grid-template-columns: 1fr 2fr; padding: 3rem 0;
+            border-bottom: 1px solid var(--border); transition: 0.3s;
         }
+        .service-row:hover { padding-left: 2rem; background: rgba(255,255,255,0.01); }
+        .service-row h3 { font-size: 2rem; font-weight: 400; }
+        .service-row p { color: var(--text-dim); max-width: 500px; }
 
-        .hero p {
-            max-width: 600px;
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            margin-bottom: 3rem;
+        /* --- CLIENTS / CREATIVE WORKS --- */
+        .clients-section { background: #0a0a0a; border-radius: 24px; padding: 6rem 4rem; margin: 4rem 5%; max-width: calc(100% - 10%); }
+        .client-list { margin-top: 2rem; display: flex; flex-direction: column; }
+        
+        .client-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 3rem 0; border-bottom: 1px solid var(--border);
+            text-decoration: none; color: var(--text-main); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
         }
+        
+        .client-item:last-child { border-bottom: none; }
 
-        .cta-btn {
-            background: var(--text-main);
-            color: var(--bg);
-            padding: 1.2rem 2.5rem;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: inline-block;
-        }
+        .client-name { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 4.5rem); font-weight: 700; transition: transform 0.5s, color 0.3s; z-index: 2; }
+        .client-meta { text-align: right; z-index: 2; transition: transform 0.5s; }
+        .client-industry { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 0.5rem; }
+        .client-role { font-size: 0.9rem; color: var(--text-main); }
 
-        .cta-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px var(--accent-soft);
-            background: var(--accent);
+        /* Hover Effect for Clients */
+        .client-item::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--accent); transform: scaleY(0); transform-origin: bottom;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1; opacity: 0.05;
         }
-
-        /* --- SERVICES SECTION --- */
-        .services {
-            padding: 10rem 5%;
-        }
-
-        .section-tag {
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 3rem;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-10px);
-        }
-
-        .card h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        .card i {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            display: block;
-            color: var(--accent);
-        }
+        .client-item:hover::before { transform: scaleY(1); transform-origin: top; }
+        .client-item:hover .client-name { transform: translateX(20px); color: var(--accent); }
+        .client-item:hover .client-meta { transform: translateX(-20px); }
 
         /* --- FOOTER --- */
-        footer {
-            padding: 5rem 5% 2rem;
-            text-align: center;
-            border-top: 1px solid var(--glass-border);
-        }
-
-        .credit {
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
+        footer { padding: 4rem 5%; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid var(--border); }
+        .footer-logo { font-size: 2rem; font-family: 'Syne', sans-serif; font-weight: 800; margin-bottom: 1rem; }
+        .credit { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
         .credit b { color: var(--text-main); }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 4rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .service-row { grid-template-columns: 1fr; gap: 1rem; }
+            .client-item { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 2rem 0; }
+            .client-meta { text-align: left; }
+            .clients-section { padding: 3rem 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-glow"></div>
-
     <nav>
-        <a href="#" class="logo">BADO<span>ZA</span></a>
+        <a href="#" class="logo">BADOZA.</a>
         <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#creative">Creative Shoots</a>
-            <a href="#security">Security</a>
-            <a href="#contact">Let's Talk</a>
+            <a href="#about">Philosophy</a>
+            <a href="#services">Expertise</a>
+            <a href="#work">Selected Works</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <span class="section-tag">Premium Digital Agency</span>
-        <h1>Scale <span>Beyond</span></h1>
-        <p>BADOZA fuses cinematic creativity with enterprise-grade cloud security to protect and propel your business into the next era.</p>
-        <a href="#services" class="cta-btn">Explore Solutions</a>
-    </header>
+    <section class="hero">
+        <span class="section-tag">Digital & Creative Agency</span>
+        <h1>Design.<br>Protect.<br>Elevate.</h1>
+        <p>We craft breathtaking digital experiences, shoot cinematic campaigns, and architect impenetrable cloud security solutions for industry leaders.</p>
+        <div class="scroll-indicator">Scroll to explore</div>
+    </section>
 
-    <section class="services" id="services">
-        <span class="section-tag">Our Expertise</span>
-        <h2>Integrated Growth</h2>
-        
-        <div class="services-grid">
-            <div class="card">
-                <h3>Visual Design</h3>
-                <p>Developing high-end websites and mobile-first experiences that turn visitors into loyal customers.</p>
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                We blur the line between aesthetic brilliance and technical invulnerability.
             </div>
-            <div class="card">
-                <h3>Social Management</h3>
-                <p>Strategic content creation and ad management that builds community and drives brand awareness.</p>
-            </div>
-            <div class="card">
-                <h3>Creative Shoot</h3>
-                <p>Cinematic product photography and video production designed for high-conversion social ads.</p>
-            </div>
-            <div class="card">
-                <h3>Cloud Security</h3>
-                <p>Protecting corporate assets with elite cloud security solutions and custom-built digital safeguards.</p>
+            <div class="about-sub">
+                At BADOZA, we don't just build websites; we engineer digital ecosystems. From raw creative product shoots to complex enterprise cloud security, we provide end-to-end dominance for your brand.
             </div>
         </div>
     </section>
 
+    <section id="services">
+        <span class="section-tag">Our Expertise</span>
+        <h2 class="section-title">What We Do.</h2>
+        <div class="services-wrapper">
+            <div class="service-row">
+                <h3>Digital Platforms</h3>
+                <p>Minimalist, high-performance website design and UI/UX development focused on conversion and mobile-first experiences.</p>
+            </div>
+            <div class="service-row">
+                <h3>Creative Production</h3>
+                <p>High-end product creative shoots, videography, and social media management to craft a striking visual identity.</p>
+            </div>
+            <div class="service-row">
+                <h3>Enterprise Security</h3>
+                <p>Developing robust security architectures and cloud solutions to protect corporate assets and user data seamlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="clients-section" id="work">
+        <span class="section-tag">Selected Works</span>
+        <h2 class="section-title" style="margin-bottom: 1rem;">Our Clients.</h2>
+        
+        <div class="client-list">
+            <a href="https://badoza.github.io/Marriot/#" target="_blank" class="client-item">
+                <div class="client-name">Marriott Pharmaceuticals</div>
+                <div class="client-meta">
+                    <div class="client-industry">Healthcare & Pharma</div>
+                    <div class="client-role">Web Development</div>
+                </div>
+            </a>
+            
+            <a href="https://badoza.github.io/froozy-app/" target="_blank" class="client-item">
+                <div class="client-name">Froozy Ice Cream</div>
+                <div class="client-meta">
+                    <div class="client-industry">Food & Beverage</div>
+                    <div class="client-role">Digital Web App</div>
+                </div>
+            </a>
+            
+            <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" class="client-item">
+                <div class="client-name">NIRMANAM Design & Construction</div>
+                <div class="client-meta">
+                    <div class="client-industry">Architecture & Real Estate</div>
+                    <div class="client-role">Brand Website & UI</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 BADOZA Agency. All Rights Reserved.</p>
-        <p class="credit">Developed by <b>Kunal Dongare</b></p>
+        <div>
+            <div class="footer-logo">BADOZA.</div>
+            <p style="color: var(--text-dim); font-size: 0.9rem;">Building the future of digital.</p>
+        </div>
+        <div class="credit">
+            Developed by <b>Kunal Dongare</b>
+        </div>
     </footer>
 
 </body>
