@@ -7,12 +7,15 @@
     <title>BADOZA | The One-Stop Digital Solution</title>
     <meta name="description" content="BADOZA is a premium digital agency offering custom website design, mobile apps, strategic marketing ads, and enterprise cloud security solutions.">
     <meta name="keywords" content="Creative Agency, Web Design, Cloud Security, Ad Films, Social Media Marketing, App Development">
+    <meta name="author" content="BADOZA">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://badoza.store/">
     <meta property="og:title" content="BADOZA | The One-Stop Digital Solution">
-    <meta property="og:description" content="Architecting Brilliance. Securing the Future. We build and scale custom digital ecosystems.">
-    <meta property="og:image" content="https://badoza.store/preview.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:description" content="Beyond Aesthetics. Zero-Trust Architecture. We build and scale custom digital ecosystems.">
+    <meta property="og:image" content="https://badoza.store/preview.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BADOZA | Digital & Security Agency">
     <meta name="twitter:description" content="Architecting Brilliance. Securing the Future.">
     <meta name="twitter:image" content="https://badoza.store/preview.jpg">
@@ -51,6 +54,7 @@
         }
         .logo { font-size: 2rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: 1px; }
         .logo span { color: var(--accent-gold); }
+        .nav-links { display: flex; align-items: center; }
         .nav-links a {
             color: var(--text-light); text-decoration: none; margin-left: 2.5rem;
             font-weight: 500; font-size: 0.95rem; transition: color 0.3s;
@@ -86,14 +90,40 @@
         }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 184, 0, 0.4); background-color: #FFC933; }
 
+        /* --- THE PHILOSOPHY --- */
+        .philosophy-section {
+            padding: 8rem 5%; background-color: var(--primary-light);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .philosophy-container {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            max-width: 1200px; margin: 0 auto; align-items: center;
+        }
+        .philosophy-text h2 { font-size: 3rem; line-height: 1.1; margin-bottom: 1.5rem; }
+        .philosophy-text h2 span { color: var(--accent-gold); }
+        .philosophy-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        .acronym-list {
+            display: flex; flex-direction: column; gap: 0.5rem;
+            border-left: 3px solid var(--accent-gold); padding-left: 2rem;
+        }
+        .acronym-letter {
+            font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 800; 
+            color: var(--white); text-transform: uppercase; letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+        .acronym-letter:hover { transform: translateX(10px); color: var(--text-muted); }
+        .acronym-letter span { color: var(--accent-gold); font-size: 2.8rem; display: inline-block; width: 40px; }
+
         /* --- CORE SERVICES --- */
-        .services { padding: 6rem 5%; background-color: var(--primary-light); }
+        .services { padding: 8rem 5%; background-color: var(--primary-dark); }
         .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 4rem; }
         .section-title span { color: var(--accent-gold); }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
         .card {
-            background: var(--primary-dark); padding: 3rem 2rem; border-radius: 16px;
+            background: var(--primary-light); padding: 3rem 2rem; border-radius: 16px;
             border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s;
         }
         .card:hover { transform: translateY(-10px); border-color: var(--accent-gold); }
@@ -107,7 +137,7 @@
 
         /* --- DIGITAL BROCHURE --- */
         .brochure-section {
-            padding: 8rem 5%; background-color: var(--primary-dark);
+            padding: 8rem 5%; background-color: var(--primary-light);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         .brochure-container {
@@ -120,7 +150,7 @@
         
         .brochure-list { display: flex; flex-direction: column; gap: 1.5rem; }
         .brochure-item {
-            background: var(--primary-light); padding: 1.5rem 2rem; border-radius: 12px;
+            background: var(--primary-dark); padding: 1.5rem 2rem; border-radius: 12px;
             border-left: 4px solid var(--accent-gold); transition: transform 0.3s ease;
         }
         .brochure-item:hover { transform: translateX(10px); background: #172a4f; }
@@ -128,7 +158,7 @@
         .brochure-item p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
 
         /* --- CLIENT LOGOS --- */
-        .clients { padding: 6rem 5%; text-align: center; background-color: var(--primary-light); }
+        .clients { padding: 6rem 5%; text-align: center; background-color: var(--primary-dark); }
         .client-wrapper {
             display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4rem;
             max-width: 1100px; margin: 3rem auto 0; background: var(--white); padding: 4rem; border-radius: 24px;
@@ -147,26 +177,24 @@
         .komiko-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 2px; }
 
         /* --- CONTACT FORM --- */
-        .contact-section { padding: 8rem 5%; background-color: var(--primary-dark); text-align: center; }
-        .contact-form { max-width: 600px; margin: 0 auto; background: var(--primary-light); padding: 3rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .contact-section { padding: 8rem 5%; background-color: var(--primary-light); text-align: center; }
+        .contact-form { max-width: 600px; margin: 0 auto; background: var(--primary-dark); padding: 3rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
         .input-group { margin-bottom: 1.5rem; text-align: left; }
         .input-group label { display: block; margin-bottom: 0.5rem; color: var(--text-light); font-size: 0.9rem; }
         .input-group input, .input-group textarea {
             width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
-            background: var(--primary-dark); color: var(--white); font-family: inherit;
+            background: var(--primary-light); color: var(--white); font-family: inherit;
         }
         .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--accent-gold); }
 
         /* --- FOOTER --- */
         footer { text-align: center; padding: 3rem 5%; background: #060f1c; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-        .credit { color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px; margin-top: 1rem; }
-        .credit a { color: var(--accent-gold); font-weight: bold; text-decoration: none; transition: 0.3s; }
-        .credit a:hover { text-decoration: underline; }
+        .credit { color: var(--text-muted); font-size: 0.95rem; letter-spacing: 1px; margin-top: 1rem; font-weight: 500; }
 
         @media (max-width: 900px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
-            .brochure-container { grid-template-columns: 1fr; }
+            .philosophy-container, .brochure-container { grid-template-columns: 1fr; }
             .client-wrapper { padding: 2rem; flex-direction: column; gap: 3rem; }
         }
     </style>
@@ -176,9 +204,9 @@
     <nav>
         <a href="#" class="logo">BADOZA<span>.</span></a>
         <div class="nav-links">
+            <a href="#philosophy">Our Philosophy</a>
             <a href="#services">Core Setup</a>
             <a href="#brochure">The Ecosystem</a>
-            <a href="#clients">Our Clients</a>
             <a href="#contact">Let's Talk</a>
         </div>
     </nav>
@@ -188,6 +216,25 @@
         <h1>Architecting <span>Brilliance.</span><br>Securing the Future.</h1>
         <p>We blend high-end visual design and creative production with impenetrable cloud security solutions to accelerate your business growth.</p>
         <a href="#contact" class="btn-primary">Start Your Evolution</a>
+    </section>
+
+    <section class="philosophy-section" id="philosophy">
+        <div class="philosophy-container">
+            <div class="philosophy-text">
+                <h2>What is <span>BADOZA?</span></h2>
+                <p>When enterprise clients and industry leaders ask what our name stands for, the answer defines our entire approach to digital business.</p>
+                <p>We are a dual-force agency. We bridge the critical gap between breathtaking visual experiences and fortified corporate infrastructure. It is more than a name—it is our operational blueprint for your brand's dominance.</p>
+            </div>
+            
+            <div class="acronym-list">
+                <div class="acronym-letter"><span>B</span>eyond</div>
+                <div class="acronym-letter"><span>A</span>esthetics.</div>
+                <div class="acronym-letter"><span>D</span>igital</div>
+                <div class="acronym-letter"><span>O</span>perations &</div>
+                <div class="acronym-letter"><span>Z</span>ero-Trust</div>
+                <div class="acronym-letter"><span>A</span>rchitecture.</div>
+            </div>
+        </div>
     </section>
 
     <section class="services" id="services">
@@ -284,7 +331,7 @@
 
     <footer>
         <div class="logo" style="font-size: 1.5rem;">BADOZA<span>.</span></div>
-        <p class="credit">Developed by <a href="https://www.instagram.com/" target="_blank">Kunal Dongare</a></p>
+        <p class="credit">&copy; 2026 BADOZA. All rights reserved.</p>
     </footer>
 
 </body>
