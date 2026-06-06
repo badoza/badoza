@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>BADOZA | The One-Stop Digital Solution</title>
+    <meta name="description" content="BADOZA is a premium digital agency offering custom website design, mobile apps, strategic marketing ads, and enterprise cloud security solutions.">
+    <meta name="keywords" content="Creative Agency, Web Design, Cloud Security, Ad Films, Social Media Marketing, App Development">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://badoza.store/">
+    <meta property="og:title" content="BADOZA | The One-Stop Digital Solution">
+    <meta property="og:description" content="Architecting Brilliance. Securing the Future. We build and scale custom digital ecosystems.">
+    <meta property="og:image" content="https://badoza.store/preview.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BADOZA | Digital & Security Agency">
+    <meta name="twitter:description" content="Architecting Brilliance. Securing the Future.">
+    <meta name="twitter:image" content="https://badoza.store/preview.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -68,6 +82,7 @@
             background-color: var(--accent-gold); color: var(--primary-dark);
             padding: 1.2rem 3rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;
             text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(255, 184, 0, 0.2);
+            border: none; cursor: pointer; display: inline-block;
         }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 184, 0, 0.4); background-color: #FFC933; }
 
@@ -90,7 +105,7 @@
         .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--white); }
         .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        /* --- DIGITAL BROCHURE / ONE-STOP SOLUTION --- */
+        /* --- DIGITAL BROCHURE --- */
         .brochure-section {
             padding: 8rem 5%; background-color: var(--primary-dark);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -124,7 +139,6 @@
         }
         .client-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
         
-        /* Text Logo Styles for Nirmanam & Komiko */
         .text-logo {
             font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;
             color: #333; text-transform: uppercase; transition: all 0.4s ease; letter-spacing: 1px;
@@ -132,13 +146,23 @@
         .text-logo:hover { color: var(--accent-gold); }
         .komiko-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 2px; }
 
+        /* --- CONTACT FORM --- */
+        .contact-section { padding: 8rem 5%; background-color: var(--primary-dark); text-align: center; }
+        .contact-form { max-width: 600px; margin: 0 auto; background: var(--primary-light); padding: 3rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .input-group { margin-bottom: 1.5rem; text-align: left; }
+        .input-group label { display: block; margin-bottom: 0.5rem; color: var(--text-light); font-size: 0.9rem; }
+        .input-group input, .input-group textarea {
+            width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--primary-dark); color: var(--white); font-family: inherit;
+        }
+        .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--accent-gold); }
+
         /* --- FOOTER --- */
         footer { text-align: center; padding: 3rem 5%; background: #060f1c; border-top: 1px solid rgba(255, 255, 255, 0.05); }
         .credit { color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px; margin-top: 1rem; }
         .credit a { color: var(--accent-gold); font-weight: bold; text-decoration: none; transition: 0.3s; }
         .credit a:hover { text-decoration: underline; }
 
-        /* Responsive Design */
         @media (max-width: 900px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
@@ -149,25 +173,23 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <a href="#" class="logo">BADOZA<span>.</span></a>
         <div class="nav-links">
             <a href="#services">Core Setup</a>
             <a href="#brochure">The Ecosystem</a>
             <a href="#clients">Our Clients</a>
+            <a href="#contact">Let's Talk</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="tagline">Strategic Growth & Design</div>
         <h1>Architecting <span>Brilliance.</span><br>Securing the Future.</h1>
         <p>We blend high-end visual design and creative production with impenetrable cloud security solutions to accelerate your business growth.</p>
-        <a href="#brochure" class="btn-primary">Explore Our Solutions</a>
+        <a href="#contact" class="btn-primary">Start Your Evolution</a>
     </section>
 
-    <!-- CORE SERVICES -->
     <section class="services" id="services">
         <h2 class="section-title">Fueling Your <span>Growth</span></h2>
         <div class="grid">
@@ -189,7 +211,6 @@
         </div>
     </section>
 
-    <!-- THE DIGITAL BROCHURE / ONE-STOP SOLUTION -->
     <section class="brochure-section" id="brochure">
         <div class="brochure-container">
             <div class="brochure-text">
@@ -218,35 +239,49 @@
         </div>
     </section>
 
-    <!-- CLIENTS SECTION -->
     <section class="clients" id="clients">
         <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
         <p style="color: var(--text-muted);">We help businesses scale, secure their infrastructure, and dominate their market.</p>
         
         <div class="client-wrapper">
-            <!-- Marriott Logo -->
             <a href="https://badoza.github.io/Marriot/#" target="_blank">
                 <img src="Marriott.JPG.jpeg" alt="Marriott Pharmaceuticals" class="client-logo">
             </a>
-            
-            <!-- Froozy Logo -->
             <a href="https://badoza.github.io/froozy-app/" target="_blank">
                 <img src="Logo (3).png" alt="Froozy Handcrafted Icecream" class="client-logo">
             </a>
-            
-            <!-- Nirmanam Link -->
             <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" style="text-decoration: none;">
                 <div class="text-logo">Nirmanam Design</div>
             </a>
-
-            <!-- NEW CLIENT: Crochet by Komiko -->
             <a href="https://crochetbykomiko.shop/" target="_blank" style="text-decoration: none;">
                 <div class="text-logo komiko-logo">Crochet by Komiko</div>
             </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Build <span>Together</span></h2>
+        <p style="color: var(--text-muted); margin-bottom: 3rem;">Ready to automate your growth? Drop your details below.</p>
+        
+        <div class="contact-form">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="input-group">
+                    <label for="name">Your Name / Company</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="input-group">
+                    <label for="message">How can we help you scale?</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="I need a new website and cloud security setup..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="logo" style="font-size: 1.5rem;">BADOZA<span>.</span></div>
         <p class="credit">Developed by <a href="https://www.instagram.com/" target="_blank">Kunal Dongare</a></p>
