@@ -4,28 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>BADOZA | The One-Stop Digital Solution</title>
-    <meta name="description" content="BADOZA is a premium digital agency offering custom website design, mobile apps, strategic marketing ads, and enterprise cloud security solutions.">
-    <meta name="keywords" content="Creative Agency, Web Design, Cloud Security, Ad Films, Social Media Marketing, App Development">
-    <meta name="author" content="BADOZA">
+    <title>BADOZA | Beyond Aesthetics. Digital Operations & Zero-Trust Architecture</title>
+    
+    <meta name="description" content="BADOZA is an elite digital operations and cloud infrastructure agency. We build high-performance mobile-first web platforms and secure corporate ecosystems with Zero-Trust Architecture and Microsoft Entra ID integration across India and the APAC region.">
+    <meta name="keywords" content="BADOZA, Zero-Trust Architecture, Microsoft Entra ID, Premium Web Design India, Mobile App Development, Enterprise Cloud Security Karnataka, Ad Film Production, Corporate Identity Asia">
+    <meta name="author" content="Kunal Dongare">
+    
+    <meta name="geo.region" content="IN-KA">
+    <meta name="geo.placename" content="Karnataka">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://badoza.store/">
-    <meta property="og:title" content="BADOZA | The One-Stop Digital Solution">
-    <meta property="og:description" content="Beyond Aesthetics. Zero-Trust Architecture. We build and scale custom digital ecosystems.">
+    <meta property="og:title" content="BADOZA | Beyond Aesthetics. Digital Operations & Zero-Trust Architecture">
+    <meta property="og:description" content="Engineering high-performance mobile-responsive web platforms fortified with enterprise-grade Zero-Trust Cloud Security for scaling startups.">
     <meta property="og:image" content="https://badoza.store/preview.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BADOZA | Digital & Security Agency">
-    <meta name="twitter:description" content="Architecting Brilliance. Securing the Future.">
+    <meta name="twitter:title" content="BADOZA | Digital Operations & Security Infrastructure">
+    <meta name="twitter:description" content="Architecting high-converting digital ecosystems and secure enterprise operations.">
     <meta name="twitter:image" content="https://badoza.store/preview.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "BADOZA",
+      "url": "https://badoza.store/",
+      "logo": "https://badoza.store/logo.jpg",
+      "image": "https://badoza.store/preview.jpg",
+      "description": "Premium digital operations agency delivering mobile-first user experiences, custom application frameworks, and enterprise Microsoft Entra ID Zero-Trust cloud security implementations.",
+      "founder": {
+        "@type": "Person",
+        "name": "Kunal Dongare"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "knowsAbout": [
+        "Mobile-First Web Development",
+        "User Interface Design",
+        "Zero-Trust Architecture",
+        "Microsoft Entra ID",
+        "Cloud Security Operations",
+        "Corporate Video Production",
+        "E-commerce Performance Scaling"
+      ],
+      "sameAs": [
+        "https://agnilochana.fun/#"
+      ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CSS STYLES --- */
+        /* --- CORE ARCHITECTURE AND CSS VARIABLE SYSTEM --- */
         :root {
             --primary-dark: #0A192F; 
             --primary-light: #112240;
@@ -45,7 +82,7 @@
 
         h1, h2, h3, h4, .logo { font-family: 'Outfit', sans-serif; }
 
-        /* --- NAVIGATION --- */
+        /* --- STICKY NAVIGATION BAR --- */
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 1.5rem 5%; background: rgba(10, 25, 47, 0.95);
@@ -61,7 +98,7 @@
         }
         .nav-links a:hover { color: var(--accent-gold); }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO CONVERSION ENGINE --- */
         .hero {
             min-height: 100vh; display: flex; flex-direction: column; justify-content: center; 
             align-items: center; text-align: center; padding: 8rem 5% 4rem; position: relative;
@@ -78,9 +115,9 @@
             padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem;
             margin-bottom: 2rem; letter-spacing: 1px; text-transform: uppercase;
         }
-        .hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.5rem, 5.5vw, 5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; tracking: -0.02em; }
         .hero h1 span { color: var(--accent-gold); }
-        .hero p { max-width: 700px; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 3rem; }
+        .hero p { max-width: 750px; font-size: 1.15rem; color: var(--text-muted); margin-bottom: 3rem; font-weight: 400; }
         
         .btn-primary {
             background-color: var(--accent-gold); color: var(--primary-dark);
@@ -90,7 +127,7 @@
         }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 184, 0, 0.4); background-color: #FFC933; }
 
-        /* --- THE PHILOSOPHY --- */
+        /* --- THE PHILOSOPHY SECTION --- */
         .philosophy-section {
             padding: 8rem 5%; background-color: var(--primary-light);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -116,9 +153,9 @@
         .acronym-letter:hover { transform: translateX(10px); color: var(--text-muted); }
         .acronym-letter span { color: var(--accent-gold); font-size: 2.8rem; display: inline-block; width: 40px; }
 
-        /* --- CORE SERVICES --- */
+        /* --- CORE SERVICES SECTION --- */
         .services { padding: 8rem 5%; background-color: var(--primary-dark); }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 4rem; }
+        .section-title { text-align: center; font-size: 2.8rem; font-weight: 800; margin-bottom: 4rem; }
         .section-title span { color: var(--accent-gold); }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
@@ -135,7 +172,7 @@
         .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--white); }
         .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        /* --- DIGITAL BROCHURE --- */
+        /* --- COMPLETE END-TO-END ECOSYSTEM --- */
         .brochure-section {
             padding: 8rem 5%; background-color: var(--primary-light);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -157,37 +194,142 @@
         .brochure-item h4 { font-size: 1.25rem; color: var(--white); margin-bottom: 0.5rem; }
         .brochure-item p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
 
-        /* --- CLIENT LOGOS --- */
-        .clients { padding: 6rem 5%; text-align: center; background-color: var(--primary-dark); }
+        /* ================================================================= -->
+        /* ADVANCED FEATURED CLIENT GRID WITH ASYMMETRIC ALIGNMENT           -->
+        /* ================================================================= */
+        .clients { padding: 8rem 5%; text-align: center; background-color: var(--primary-dark); position: relative; }
+        
+        /* The Base White Canvas Container */
         .client-wrapper {
-            display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4rem;
-            max-width: 1100px; margin: 3rem auto 0; background: var(--white); padding: 4rem; border-radius: 24px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            background: var(--white);
+            padding: 5rem 4rem;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
+
+        /* Generic standardizing styles for typical partner elements */
+        .partner-item {
+            grid-column: span 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .partner-item:hover { transform: scale(1.05); }
+
         .client-logo {
-            max-width: 180px; max-height: 90px; object-fit: contain;
-            filter: grayscale(100%); opacity: 0.7; transition: all 0.4s ease;
+            max-width: 100%;
+            max-height: 70px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.65;
+            transition: all 0.4s ease;
         }
-        .client-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+        .partner-item:hover .client-logo { filter: grayscale(0%); opacity: 1; }
         
         .text-logo {
-            font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;
-            color: #333; text-transform: uppercase; transition: all 0.4s ease; letter-spacing: 1px;
+            font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 800;
+            color: #2D3748; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none;
+            text-align: center; opacity: 0.7; transition: all 0.4s ease;
         }
-        .text-logo:hover { color: var(--accent-gold); }
-        .komiko-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 2px; }
+        .partner-item:hover .text-logo { color: #0A192F; opacity: 1; }
+        .komiko-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 1px; }
 
-        /* --- CONTACT FORM & POPUP --- */
+        /* The Asymmetric Hero Client Card (Breaks Alignment to Dominate Focus) */
+        .featured-hero-partner {
+            grid-column: span 12; /* Spans full horizontal width on standard grids */
+            background: #0A192F;
+            border: 2px solid var(--accent-gold);
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            margin-bottom: 2.5rem; /* Forces structural separation from items below */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+            text-align: left;
+            transform: translateY(-10px); /* Visual elevation shift */
+            box-shadow: 0 20px 40px rgba(255, 184, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+        .featured-hero-partner:hover {
+            transform: translateY(-15px) scale(1.01);
+            box-shadow: 0 30px 50px rgba(255, 184, 0, 0.25);
+            border-color: #FFFFFF;
+        }
+
+        .hero-partner-badge {
+            background: rgba(255, 184, 0, 0.1);
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        .hero-partner-info h3 {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .hero-partner-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-w: 550px;
+            line-height: 1.5;
+        }
+        
+        .hero-partner-logo-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 240px;
+            height: 120px;
+            transition: all 0.4s ease;
+        }
+        .featured-hero-partner:hover .hero-partner-logo-box {
+            background: rgba(255, 255, 255, 1);
+        }
+        .hero-partner-img {
+            max-width: 100%;
+            max-height: 85px;
+            object-fit: contain;
+            filter: brightness(0) invert(1); /* Sharp white logo default state */
+            transition: all 0.4s ease;
+        }
+        .featured-hero-partner:hover .hero-partner-img {
+            filter: none; /* Full vibrant color rendering inside white background card on interaction */
+        }
+
+        /* --- CONVERSION-FIRST LEAD ACQUISITION FORM --- */
         .contact-section { padding: 8rem 5%; background-color: var(--primary-light); text-align: center; }
-        .contact-form { max-width: 600px; margin: 0 auto; background: var(--primary-dark); padding: 3rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .input-group { margin-bottom: 1.5rem; text-align: left; }
-        .input-group label { display: block; margin-bottom: 0.5rem; color: var(--text-light); font-size: 0.9rem; }
+        .contact-form { max-width: 650px; margin: 0 auto; background: var(--primary-dark); padding: 3.5rem 3rem; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 30px 60px rgba(0,0,0,0.2); }
+        .input-group { margin-bottom: 1.75rem; text-align: left; }
+        .input-group label { display: block; margin-bottom: 0.6rem; color: var(--text-light); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; }
         .input-group input, .input-group textarea {
-            width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
-            background: var(--primary-light); color: var(--white); font-family: inherit;
+            width: 100%; padding: 1.1rem; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--primary-light); color: var(--white); font-family: inherit; font-size: 1rem; transition: border-color 0.3s;
         }
-        .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--accent-gold); }
+        .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--accent-gold); box-shadow: 0 0 10px rgba(255, 184, 0, 0.1); }
 
-        /* Popup Styles */
+        /* Interactive Modal Confirmation Popups */
         .popup-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(10, 25, 47, 0.85); backdrop-filter: blur(8px);
@@ -197,22 +339,45 @@
         .popup-overlay.show { opacity: 1; visibility: visible; }
         .popup-box {
             background: var(--primary-light); border: 1px solid var(--accent-gold);
-            padding: 3rem; border-radius: 16px; text-align: center; max-width: 400px;
-            transform: translateY(20px); transition: all 0.3s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            padding: 3.5rem 3rem; border-radius: 24px; text-align: center; max-width: 450px;
+            transform: translateY(20px); transition: all 0.3s ease; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
         .popup-overlay.show .popup-box { transform: translateY(0); }
-        .popup-box h3 { color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .popup-box p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; }
+        .popup-box h3 { color: var(--accent-gold); font-size: 2rem; margin-bottom: 0.75rem; font-weight: 800; }
+        .popup-box p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6; }
 
-        /* --- FOOTER --- */
-        footer { text-align: center; padding: 3rem 5%; background: #060f1c; border-top: 1px solid rgba(255, 255, 255, 0.05); }
-        .credit { color: var(--text-muted); font-size: 0.95rem; letter-spacing: 1px; margin-top: 1rem; font-weight: 500; }
+        /* --- FOOTER LAYOUT --- */
+        footer { text-align: center; padding: 4rem 5%; background: #060f1c; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .credit { color: var(--text-muted); font-size: 0.95rem; letter-spacing: 0.5px; margin-top: 1.5rem; font-weight: 500; }
+        .footer-disclaimer { font-size: 0.75rem; color: #4A5568; max-width: 600px; margin: 0.75rem auto 0; line-height: 1.4; }
 
-        @media (max-width: 900px) {
+        /* ================================================================= -->
+        /* MEDIA CONTROLS AND FLUID RESPONSIVE CONTAINERS                    -->
+        /* ================================================================= ]*/
+        @media (max-width: 1024px) {
+            .client-wrapper { padding: 4rem 2.5rem; }
+            .partner-item { grid-column: span 4; }
+        }
+
+        @media (max-width: 850px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .philosophy-container, .brochure-container { grid-template-columns: 1fr; }
-            .client-wrapper { padding: 2rem; flex-direction: column; gap: 3rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .philosophy-container, .brochure-container { grid-template-columns: 1fr; gap: 3rem; }
+            .philosophy-text h2, .brochure-text h2 { font-size: 2.4rem; }
+            
+            /* Asymmetric Hero Transformation on Mobile Viewports */
+            .featured-hero-partner {
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+                align-items: center;
+            }
+            .hero-partner-info p { max-width: 100%; }
+            .hero-partner-logo-box { width: 100%; min-width: unset; }
+            .client-wrapper { display: flex; flex-direction: column; gap: 3.5rem; padding: 3rem 1.5rem; }
+            .partner-item { width: 100%; height: auto; }
+            .client-logo { max-height: 60px; }
+            .contact-form { padding: 2.5rem 1.75rem; }
         }
     </style>
 </head>
@@ -224,15 +389,16 @@
             <a href="#philosophy">Our Philosophy</a>
             <a href="#services">Core Setup</a>
             <a href="#brochure">The Ecosystem</a>
+            <a href="#clients">Enterprise Partners</a>
             <a href="#contact">Let's Talk</a>
         </div>
     </nav>
 
     <section class="hero">
-        <div class="tagline">Strategic Growth & Design</div>
-        <h1>Architecting <span>Brilliance.</span><br>Securing the Future.</h1>
-        <p>We blend high-end visual design and creative production with impenetrable cloud security solutions to accelerate your business growth.</p>
-        <a href="#contact" class="btn-primary">Start Your Evolution</a>
+        <div class="tagline">Enterprise Digital Solutions</div>
+        <h1>Architecting <span>Brilliance.</span><br>Securing Operational Growth.</h1>
+        <p>BADOZA engineers elite, mobile-first web platforms and coordinates airtight Zero-Trust cloud security operations built to help modern enterprises dominate Asian and global markets securely.</p>
+        <a href="#contact" class="btn-primary">Initiate Enterprise Strategy</a>
     </section>
 
     <section class="philosophy-section" id="philosophy">
@@ -245,7 +411,7 @@
             
             <div class="acronym-list">
                 <div class="acronym-letter"><span>B</span>eyond</div>
-                <div class="acronym-letter"><span>A</span>esthetics.</div>
+                <div class="acronym-letter"><span>A</span>sthetics.</div>
                 <div class="acronym-letter"><span>D</span>igital</div>
                 <div class="acronym-letter"><span>O</span>perations &</div>
                 <div class="acronym-letter"><span>Z</span>ero-Trust</div>
@@ -259,18 +425,18 @@
         <div class="grid">
             <div class="card">
                 <div class="card-icon">🎨</div>
-                <h3>Creative Design</h3>
-                <p>Developing visually striking, mobile-first websites that capture attention and drive conversions.</p>
+                <h3>Premium Web Engineering</h3>
+                <p>Developing high-performance, mobile-responsive custom web architectures optimized specifically for regional cellular data networks to minimize latency and maximize lead conversion loops.</p>
             </div>
             <div class="card">
-                <div class="card-icon">📸</div>
-                <h3>Product Production</h3>
-                <p>Professional creative shoots and content generation tailored to make your brand stand out.</p>
+                <div class="card-icon">🎬</div>
+                <h3>High-Authority Production</h3>
+                <p>Premium corporate media pipelines and cinematic brand asset production optimized for high-retention audience acquisition across global digital streams.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🛡️</div>
-                <h3>Cloud Security</h3>
-                <p>Robust, enterprise-grade security solutions designed to protect your corporate digital assets.</p>
+                <h3>Zero-Trust Security Cloud</h3>
+                <p>Deploying elite data fortress boundaries utilizing structured identity management and custom Microsoft Entra ID provisions to protect critical transaction pipelines.</p>
             </div>
         </div>
     </section>
@@ -279,84 +445,109 @@
         <div class="brochure-container">
             <div class="brochure-text">
                 <h2>Your <span>One-Stop</span><br>Digital Ecosystem.</h2>
-                <p>You don't need five different agencies. At BADOZA, we provide a complete, end-to-end solution for your business. From the moment a user sees your ad, to the custom app they download, to the cloud infrastructure protecting their data—we build and scale it all tailored entirely to your specific needs.</p>
+                <p>Modern fast-scaling companies lose critical speed managing fragmented vendors. BADOZA integrates every operational tier your business needs under a unified enterprise banner. From front-end user experience to cloud network defense, we configure components seamlessly to run automatically for your scale.</p>
             </div>
             
             <div class="brochure-list">
                 <div class="brochure-item">
-                    <h4>Web & Mobile App Design</h4>
-                    <p>Bespoke, custom-coded websites and fluid mobile applications designed specifically around your business goals and user needs.</p>
+                    <h4>Custom Web & Application Architectures</h4>
+                    <p>Bespoke frontend engines and fluid web assets designed around strategic product goals, responsive interfaces, and clear interactive pathways.</p>
                 </div>
                 <div class="brochure-item">
-                    <h4>Strategic Marketing Ads</h4>
-                    <p>Data-driven, high-conversion ad campaigns designed strictly for measurable business growth and ROI.</p>
+                    <h4>High-Conversion Performance Ads</h4>
+                    <p>Data-grounded distribution frameworks built to secure targeted local market capture, conversion velocity, and trackable client onboarding.</p>
                 </div>
                 <div class="brochure-item">
-                    <h4>Ad Films & Video Production</h4>
-                    <p>Cinematic, high-quality video production and ad films that tell your brand's story and captivate your target audience.</p>
+                    <h4>Cinematic Ad Films & Creative Assets</h4>
+                    <p>High-end corporate videos and engaging content formats built to communicate company values clearly to modern consumer populations.</p>
                 </div>
                 <div class="brochure-item">
-                    <h4>Social Media Content</h4>
-                    <p>End-to-end social media management, featuring highly creative, trend-forward content designed to build brand loyalty and engagement.</p>
+                    <h4>Strategic Audience Content Management</h4>
+                    <p>Systematic authority content production managed end-to-end to build market trust, engagement indicators, and direct-to-brand authority footprints.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="clients" id="clients">
-        <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
-        <p style="color: var(--text-muted);">We help businesses scale, secure their infrastructure, and dominate their market.</p>
+        <h2 class="section-title">Trusted by <span>Industry Partners</span></h2>
+        <p style="color: var(--text-muted);">We help leading enterprises secure operational data, optimize infrastructure, and lead markets.</p>
         
         <div class="client-wrapper">
-            <a href="https://badoza.github.io/Marriot/#" target="_blank">
-                <img src="Marriott.JPG.jpeg" alt="Marriott Pharmaceuticals" class="client-logo">
+            
+            <a href="https://agnilochana.fun/#" target="_blank" rel="noopener noreferrer" class="featured-hero-partner">
+                <div class="hero-partner-info">
+                    <div class="hero-partner-badge">Featured Ecosystem Launch</div>
+                    <h3>Agnilochana</h3>
+                    <p>Collaborative application optimization deployment focusing on high-velocity user interfaces and mobile accessibility optimizations across regional systems.</p>
+                </div>
+                <div class="hero-partner-logo-box">
+                    <img src="logo.jpg" alt="Agnilochana Logo" class="hero-partner-img">
+                </div>
             </a>
-            <a href="https://badoza.github.io/froozy-app/" target="_blank">
-                <img src="Logo (3).png" alt="Froozy Handcrafted Icecream" class="client-logo">
-            </a>
-            <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" style="text-decoration: none;">
-                <div class="text-logo">Nirmanam Design</div>
-            </a>
-            <a href="https://crochetbykomiko.shop/" target="_blank" style="text-decoration: none;">
-                <div class="text-logo komiko-logo">Crochet by Komiko</div>
-            </a>
+
+            <div class="partner-item">
+                <a href="https://badoza.github.io/Marriot/#" target="_blank" rel="noopener noreferrer">
+                    <img src="Marriott.JPG.jpeg" alt="Marriott Pharmaceuticals Logo" class="client-logo">
+                </a>
+            </div>
+            
+            <div class="partner-item">
+                <a href="https://badoza.github.io/froozy-app/" target="_blank" rel="noopener noreferrer">
+                    <img src="Logo (3).png" alt="Froozy Handcrafted Icecream Logo" class="client-logo">
+                </a>
+            </div>
+            
+            <div class="partner-item">
+                <a href="https://badoza.github.io/nirmanam-website/#about" target="_blank" rel="noopener noreferrer" class="text-logo">
+                    Nirmanam Design
+                </a>
+            </div>
+            
+            <div class="partner-item">
+                <a href="https://crochetbykomiko.shop/" target="_blank" rel="noopener noreferrer" class="text-logo komiko-logo">
+                    Crochet by Komiko
+                </a>
+            </div>
+            
         </div>
     </section>
 
     <section class="contact-section" id="contact">
-        <h2 class="section-title">Let's Build <span>Together</span></h2>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">Ready to automate your growth? Drop your details below.</p>
+        <h2 class="section-title">Deploy Your <span>Infrastructure</span></h2>
+        <p style="color: var(--text-muted); margin-bottom: 3rem;">Connect with our technical design team to audit and secure your corporate roadmap.</p>
         
         <div class="contact-form">
             <form id="contactForm" action="https://formspree.io/f/xaqzqkqv" method="POST">
                 <div class="input-group">
-                    <label for="name">Your Name / Company</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                    <label for="name">Full Name / Corporate Title</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Vikram Sharma | CTO">
                 </div>
                 <div class="input-group">
-                    <label for="email">Work Email</label>
-                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    <label for="email">Work Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="e.g., corporate@company.com">
                 </div>
                 <div class="input-group">
-                    <label for="message">How can we help you scale?</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="I need a new website and cloud security setup..."></textarea>
+                    <label for="message">Project Scope & Scalability Goals</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Detail your requirements for mobile web infrastructure, application builds, or custom Microsoft Entra ID deployments..."></textarea>
                 </div>
-                <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%;">Send Message</button>
+                <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%;">Request Technical Proposal</button>
             </form>
         </div>
     </section>
 
     <div id="successPopup" class="popup-overlay">
         <div class="popup-box">
-            <h3>Request Received. 🚀</h3>
-            <p>We've received your details. Our team will review your project and reach out shortly.</p>
-            <button id="closePopup" class="btn-primary" style="margin-top: 1rem; padding: 0.8rem 2rem;">Close</button>
+            <h3>Proposal Requested. 🚀</h3>
+            <p>Our operations architecture desk has queued your corporate details. A project manager will review your submission and connect within one business day.</p>
+            <button id="closePopup" class="btn-primary" style="margin-top: 1rem; padding: 0.8rem 2rem;">Return to Main</button>
         </div>
     </div>
 
     <footer>
         <div class="logo" style="font-size: 1.5rem;">BADOZA<span>.</span></div>
         <p class="credit">&copy; 2026 BADOZA. All rights reserved.</p>
+        <p class="footer-disclaimer">Global digital operations, identity access blueprints, and secure web application frameworks optimized for Indian and Asia-Pacific regional enterprise architectures.</p>
     </footer>
 
     <script>
@@ -366,10 +557,10 @@
         const submitBtn = document.getElementById('submitBtn');
 
         form.addEventListener('submit', async function(event) {
-            event.preventDefault(); // Stop the redirect
+            event.preventDefault(); 
             
             const originalText = submitBtn.innerText;
-            submitBtn.innerText = "Sending...";
+            submitBtn.innerText = "Processing Request...";
             
             const data = new FormData(form);
             try {
@@ -383,10 +574,10 @@
                     form.reset();
                     popup.classList.add('show');
                 } else {
-                    alert("Oops! There was a problem submitting your form. Did you replace YOUR_FORM_ID in the code?");
+                    alert("Submission error encountered. Please check internet properties and retry.");
                 }
             } catch (error) {
-                alert("Oops! There was a problem submitting your form.");
+                alert("Network connectivity issue prevented secure data dispatch.");
             } finally {
                 submitBtn.innerText = originalText;
             }
