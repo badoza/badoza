@@ -30,7 +30,7 @@
       "@type": "ProfessionalService",
       "name": "BADOZA",
       "url": "https://badoza.store/",
-      "logo": "https://badoza.store/logo.png",
+      "logo": "https://badoza.store/logo.jpg",
       "image": "https://badoza.store/preview.jpg",
       "description": "Premium digital operations agency delivering mobile-first user experiences, custom application frameworks, and enterprise Microsoft Entra ID Zero-Trust cloud security implementations.",
       "founder": {
@@ -201,10 +201,11 @@
         
         /* The Base White Canvas Container */
         .client-wrapper {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 2rem;
+            flex-wrap: wrap;
+            gap: 4rem;
             max-width: 1200px;
             margin: 4rem auto 0;
             background: var(--white);
@@ -213,13 +214,11 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        /* Generic standardizing styles for typical partner elements */
+        /* Generic standardizing styles for all partner elements */
         .partner-item {
-            grid-column: span 3;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80px;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         .partner-item:hover { transform: scale(1.05); }
@@ -241,82 +240,6 @@
         }
         .partner-item:hover .text-logo { color: #0A192F; opacity: 1; }
         .komiko-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: 1px; }
-
-        /* The Asymmetric Hero Client Card (Breaks Alignment to Dominate Focus) */
-        .featured-hero-partner {
-            grid-column: span 12; /* Spans full horizontal width on standard grids */
-            background: #0A192F;
-            border: 2px solid var(--accent-gold);
-            border-radius: 20px;
-            padding: 2.5rem 3rem;
-            margin-bottom: 2.5rem; /* Forces structural separation from items below */
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2.5rem;
-            text-align: left;
-            transform: translateY(-10px); /* Visual elevation shift */
-            box-shadow: 0 20px 40px rgba(255, 184, 0, 0.15);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-decoration: none;
-        }
-        .featured-hero-partner:hover {
-            transform: translateY(-15px) scale(1.01);
-            box-shadow: 0 30px 50px rgba(255, 184, 0, 0.25);
-            border-color: #FFFFFF;
-        }
-
-        .hero-partner-badge {
-            background: rgba(255, 184, 0, 0.1);
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            letter-spacing: 1.5px;
-            display: inline-block;
-            margin-bottom: 0.75rem;
-        }
-        .hero-partner-info h3 {
-            color: var(--white);
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        .hero-partner-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            max-w: 550px;
-            line-height: 1.5;
-        }
-        
-        .hero-partner-logo-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 1.5rem 2.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-width: 240px;
-            height: 120px;
-            transition: all 0.4s ease;
-        }
-        .featured-hero-partner:hover .hero-partner-logo-box {
-            background: rgba(255, 255, 255, 1);
-        }
-        .hero-partner-img {
-            max-width: 100%;
-            max-height: 85px;
-            object-fit: contain;
-            filter: brightness(0) invert(1); /* Sharp white logo default state */
-            transition: all 0.4s ease;
-        }
-        .featured-hero-partner:hover .hero-partner-img {
-            filter: none; /* Full vibrant color rendering inside white background card on interaction */
-        }
 
         /* --- CONVERSION-FIRST LEAD ACQUISITION FORM --- */
         .contact-section { padding: 8rem 5%; background-color: var(--primary-light); text-align: center; }
@@ -356,7 +279,6 @@
         /* ================================================================= ]*/
         @media (max-width: 1024px) {
             .client-wrapper { padding: 4rem 2.5rem; }
-            .partner-item { grid-column: span 4; }
         }
 
         @media (max-width: 850px) {
@@ -366,16 +288,8 @@
             .philosophy-text h2, .brochure-text h2 { font-size: 2.4rem; }
             
             /* Asymmetric Hero Transformation on Mobile Viewports */
-            .featured-hero-partner {
-                flex-direction: column;
-                padding: 2rem;
-                text-align: center;
-                align-items: center;
-            }
             .hero-partner-info p { max-width: 100%; }
-            .hero-partner-logo-box { width: 100%; min-width: unset; }
-            .client-wrapper { display: flex; flex-direction: column; gap: 3.5rem; padding: 3rem 1.5rem; }
-            .partner-item { width: 100%; height: auto; }
+            .client-wrapper { padding: 3rem 1.5rem; gap: 3.5rem; }
             .client-logo { max-height: 60px; }
             .contact-form { padding: 2.5rem 1.75rem; }
         }
@@ -411,7 +325,7 @@
             
             <div class="acronym-list">
                 <div class="acronym-letter"><span>B</span>eyond</div>
-                <div class="acronym-letter"><span>A</span>sthetics.</div>
+                <div class="acronym-letter"><span>A</span>esthetics.</div>
                 <div class="acronym-letter"><span>D</span>igital</div>
                 <div class="acronym-letter"><span>O</span>perations &</div>
                 <div class="acronym-letter"><span>Z</span>ero-Trust</div>
@@ -429,9 +343,9 @@
                 <p>Developing high-performance, mobile-responsive custom web architectures optimized specifically for regional cellular data networks to minimize latency and maximize lead conversion loops.</p>
             </div>
             <div class="card">
-                <div class="card-icon">🎬</div>
+                <div class="card-icon">📸</div>
                 <h3>High-Authority Production</h3>
-                <p>Premium corporate media pipelines and cinematic brand asset production optimized for high-retention audience acquisition across global digital streams.</p>
+                <p>Professional creative shoots and content generation tailored to make your brand stand out.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🛡️</div>
@@ -475,16 +389,11 @@
         
         <div class="client-wrapper">
             
-            <a href="https://agnilochana.fun/#" target="_blank" rel="noopener noreferrer" class="featured-hero-partner">
-                <div class="hero-partner-info">
-                    <div class="hero-partner-badge">Featured Ecosystem Launch</div>
-                    <h3>Agnilochana</h3>
-                    <p>Collaborative application optimization deployment focusing on high-velocity user interfaces and mobile accessibility optimizations across regional systems.</p>
-                </div>
-                <div class="hero-partner-logo-box">
-                    <img src="logo.jpg" alt="Agnilochana Logo" class="hero-partner-img">
-                </div>
-            </a>
+            <div class="partner-item">
+                <a href="https://agnilochana.fun/#" target="_blank" rel="noopener noreferrer">
+                    <img src="logo.jpg" alt="Agnilochana Logo" class="client-logo">
+                </a>
+            </div>
 
             <div class="partner-item">
                 <a href="https://badoza.github.io/Marriot/#" target="_blank" rel="noopener noreferrer">
